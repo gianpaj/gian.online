@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Gianfranco Palumbo ― Developer and Digital Strategist</title>
+    <meta name="description" content="Italian and Ecuadorian Full Stack Developer and Business Partner">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="Gianfranco Palumbo ― Developer and Digital Strategist" />
+    <meta property="og:description" content="Italian and Ecuadorian Full Stack Developer and Business Partner" />
+    <meta property="og:image" content="/icon-192x192.png" />
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script>
+      var OneSignal = OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "9e0901cd-84dd-4a6a-8184-d7aa9c209c56",
+        subdomainName: "gian",
+        notifyButton: {
+          enable: true
+        }
+      }]);
+    </script>
+    <script src="https://use.typekit.net/uvb0pir.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      body {
+        background: #f4f4f4;
+        color: #3a3a3a;
+        font-family: "adelle",serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.618;
+        margin: 0;
+        padding: 1rem;
+      }
+
+      a {
+        color: #4972FF;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+
+      .section {
+        margin: 2rem;
+      }
+
+      .section__header {
+        font-weight: bold;
+      }
+
+      .section__inner {
+        margin: 0 auto;
+        max-width: 800px;
+      }
+
+      /* control flashing unstyled text */
+      .wf-loading {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">
+      <div class="section__inner">
+        <header class="section__header">Gianfranco</header>
+        <div>is <span></span></div>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript">
+   var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === this.DONE) {
+        var json = JSON.parse(this.responseText);
+        var Status = json.status.substr( 0, 1 ).toUpperCase() + json.status.substr( 1 );
+        document.getElementsByTagName('span')[0].innerText = Status;
+      }
+    });
+
+    xhr.open("GET", "https://gian.stamplayapp.com/api/cobject/v1/laptop/56cf4115d80e1b23289eb3aa");
+    xhr.setRequestHeader("accept", "application/json");
+    xhr.setRequestHeader("content-type", "application/json");
+
+    xhr.send();
+  </script>
+</html>
+<!-- inspired by http://sis.to/ -->
