@@ -13,6 +13,7 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
+    "applescript": "^1.0.0",
     "request": "^2.69.0"
   }
 }
