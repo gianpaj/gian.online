@@ -1,6 +1,7 @@
 'use strict';
 // Load native UI library
 var gui = require('nw.gui');
+var applescript = require('applescript');
 
 var myStatus = null;
 
@@ -122,6 +123,8 @@ var goOnline = function() {
   tray.icon = 'img/icon@2x.png';
   updateServer('online');
   debugStatus();
+  runAppleScript();
+  setSkypeStatus('Available');
 };
 
 var goOffline = function(time) {
@@ -130,6 +133,22 @@ var goOffline = function(time) {
   tray.icon = 'img/icon-forever@2x.png';
   updateServer('offline');
   debugStatus();
+  runAppleScript();
+  setSkypeStatus('DND');
+};
+
+var runAppleScript = function() {
+  applescript.execFile('enableDisableNotificationCenter.applescript', function(err, data) {
+    if (err) { console.log(err); }
+    console.log(data);
+  });
+};
+
+var setSkypeStatus = function(status) {
+  applescript.execFile( 'setSkypeStatus.scpt', [status],  function(err, data) {  
+    if (err) { console.log(err); }
+    console.log(data);
+  });
 };
 
 var debugStatus = function() {
