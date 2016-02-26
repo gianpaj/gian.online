@@ -1,9 +1,9 @@
-Don't disturb - http://gian.online
+Do Not Disturb (DND) - http://gian.online
 ----
 
 Icons by https://thenounproject.com/daouna/
 
-[![gif](https://thumbs.gfycat.com/FondOilyAsiansmallclawedotter-size_restricted.gif "gif")](https://gfycat.com/FondOilyAsiansmallclawedotter)
+[![gif](https://thumbs.gfycat.com/FondImpishIncatern-size_restricted.gif "gif")](http://gfycat.com/FondImpishIncatern)
 
 ### Tech used
   - [Nw.js](https://github.com/nwjs/nw.js/) for the desktop app
